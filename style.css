@@ -16,7 +16,7 @@ html {
     height: 100vh;
     width: 100%;
     background-color: black;
-    /* position: fixed; */
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +28,22 @@ html {
     font-size: 6.9vw;
     line-height: 5.5vw;
     letter-spacing: -2px;
+    position: relative;
+    z-index: 9;
+}
+
+#loader video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+#yellow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #F5E41B;
 }
 
 #page1 {
