@@ -34,18 +34,28 @@ function loading() {
 
 loading();
 
-// locomotive scroll github
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
+function locomotive() {
 
-// To show the image on page 2 hover
-var elems = document.querySelectorAll(".elem")
-var page2 = document.querySelector("#page2")
-elems.forEach(function (ele) {
-    ele.addEventListener("mouseenter", function () {
-        var bgimg = ele.getAttribute("data-img")
-        page2.style.backgroundImage = `url(${bgimg})`
-    })
-})
+    // locomotive scroll from github
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('#main'),
+        smooth: true
+    });
+
+    // scroll to top
+    document.querySelector("#footer h2").addEventListener("click", () => {
+        scroll.scrollTo(0);
+    });
+
+    // To show the image on page no.2 on hover
+    var elems = document.querySelectorAll(".elem");
+    var page2 = document.querySelector("#page2");
+    elems.forEach(function (ele) {
+        ele.addEventListener("mouseenter", function () {
+            var bgimg = ele.getAttribute("data-img");
+            page2.style.backgroundImage = `url(${bgimg})`;
+        });
+    });
+}
+
+locomotive();
